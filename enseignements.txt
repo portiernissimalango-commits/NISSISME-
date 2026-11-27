@@ -1,3 +1,4 @@
-# Titre du premier enseignement Écrivez ici son texte.
-# Titre du deuxième enseignement
-Écrivez ici son texte.
+# Titre du premier Enseignement écrivez ici son texte.
+# Titre du premier enseignements écrivez ici son texte 
+
+# Titre du deuxième enseignement Écrivez ici son texte.
