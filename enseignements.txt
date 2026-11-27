@@ -1,2 +1,3 @@
- 
-enseignements.txt
+
+# Titre du deuxième enseignement
+Écrivez ici son texte.
