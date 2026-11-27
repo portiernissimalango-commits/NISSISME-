@@ -1,15 +1,19 @@
-# NISSISME-
-NISSISME, prophétisme du futur dernier Âge des hommes 
 
-Le NISSISME est une doctrine basé sur la bible, il présente des citations de la fin du monde, des prophéties, des enseignements, et des réflexions sur les évènements prophétique dans cette génération Z.
-Le NISSISME est un prophétisme du futur dernier Âge des hommes, ce dépôt rassemble ses textes et ses enseignements.
+# NISSISME
 
-contenu 
-Les documents seront ajoutés progressivement, ce dépôt contiendra,les textes fondateurs du NISSISME, les enseignements,et les messages prophétique.
+*Prophétisme du futur dernier Âge des hommes*
 
-Les textes fondateurs du NISSISME 
-Les enseignements 
-les messages et annonces 
+## Présentation
+Le NISSISME est une doctrine basée sur la Bible. Il présente des citations sur la fin du monde, des prophéties, des enseignements et des réflexions sur les événements prophétiques dans cette génération Z.
 
-Auteur 
-Gabriel nissi malango 
+## Contenu
+Ce dépôt contiendra :
+
+- les textes fondateurs du NISSISME ;
+- les enseignements ;
+- les messages prophétiques et les annonces.
+
+Les documents seront ajoutés progressivement.
+
+## Auteur
+Gabriel Nissi Malango
