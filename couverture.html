@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couverture du livre</title>
+<body style="font:18px sans-serif;text-align:center;padding:16px">
+<p>Choisissez la couverture du livre :</p>
+<input type="file" accept="image/*" id="f">
+<canvas id="c" style="display:block;width:240px;margin:20px auto"></canvas>
+<a id="a" download="couverture.jpg" style="display:none;padding:18px;background:#0b1736;color:#e5b94e;border-radius:12px">Télécharger couverture.jpg</a>
+<script>
+const f = document.getElementById('f'), c = document.getElementById('c'), a = document.getElementById('a');
+f.onchange = () => {
+  const img = new Image();
+  img.onload = () => {
+    c.width = Math.min(700, img.width);
+    c.height = Math.round(img.height * c.width / img.width);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    a.href = c.toDataURL('image/jpeg', 0.85);
+    a.style.display = 'block';
+  };
+  img.src = URL.createObjectURL(f.files[0]);
+};
+</script>
