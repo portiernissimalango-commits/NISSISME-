@@ -1,24 +1,26 @@
-!doctype html>
+<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Icônes NISSISME</title>
-<body style="font:18px sans-serif;text-align:center">
+<title>Mon logo NISSISME</title>
+<body style="font:18px sans-serif;text-align:center;padding:16px">
+<p>Choisissez votre logo :</p>
+<input type="file" accept="image/*" id="f">
+<canvas id="c" width="512" height="512" style="display:block;width:260px;margin:20px auto"></canvas>
+<a id="a" download="icon-512.png" hidden style="display:none;padding:18px;background:#0b1736;color:#e5b94e;border-radius:12px">Télécharger icon-512.png</a>
 <script>
-for (const n of [192, 512]) {
-  const c = document.createElement('canvas');
-  c.width = c.height = n;
-  const x = c.getContext('2d');
-  x.scale(n / 512, n / 512);
-  x.fillStyle = '#0b1736'; x.fillRect(0, 0, 512, 512);
-  x.strokeStyle = x.fillStyle = '#e5b94e'; x.lineWidth = 13;
-  x.beginPath(); x.arc(256, 256, 170, 0, 7); x.stroke();
-  x.font = 'bold 220px Georgia, serif'; x.textAlign = 'center';
-  x.fillText('N', 256, 332);
-  const a = document.createElement('a');
-  a.href = c.toDataURL('image/png');
-  a.download = 'icon-' + n + '.png';
-  a.textContent = 'Télécharger icon-' + n + '.png';
-  a.style.cssText = 'display:block;margin:20px;padding:18px;background:#0b1736;color:#e5b94e;border-radius:12px';
-  document.body.append(a);
-}
+const f = document.getElementById('f'), c = document.getElementById('c'), a = document.getElementById('a');
+f.onchange = () => {
+  const img = new Image();
+  img.onload = () => {
+    const x = c.getContext('2d');
+    x.fillStyle = '#0b1736'; x.fillRect(0, 0, 512, 512);
+    const e = 440 / Math.max(img.width, img.height);
+    const w = img.width * e, h = img.height * e;
+    x.drawImage(img, (512 - w) / 2, (512 - h) / 2, w, h);
+    a.href = c.toDataURL('image/png');
+    a.style.display = 'block';
+    a.hidden = false;
+  };
+  img.src = URL.createObjectURL(f.files[0]);
+};
 </script>
